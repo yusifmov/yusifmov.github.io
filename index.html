@@ -41,7 +41,6 @@
   <div class="alert alert-success ortalama">
     <strong>Sənin ortalaman: </strong> <span>0</span>
   </div>
-  <button id="hesabla" class="btn btn-primary mb-3">Hesabla</button>
 </div>
 
 <script>
@@ -51,11 +50,12 @@ $(document).ready(function(){
 	
 	$('input').each(function(){
 		ortalama += $(this).val()*$(this).data('kredit');
-		console.log(ortalama);
 	});
 	
 	ortalama /= 30;
 	$('.alert > span').text(ortalama);
+  }).on('keyup', 'input', function(){
+	$('input').change();
   }).on('click', '#hesabla', function(){
 	$('input').change();
   });
