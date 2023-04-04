@@ -1,0 +1,18 @@
+@mixin font($size, $weight, $color, $lineHeight, $letterSpacing){
+	font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size * $factor;
+    line-height: $lineHeight * $factor;
+    color: $color;
+	letter-spacing: $letterSpacing * $factor;
+}
+
+@mixin link($size, $weight, $color, $lineHeight, $letterSpacing){
+    a{
+        &, &:link, &:active, &:visited{
+            @include font($size, $weight, $color, $lineHeight, $letterSpacing);
+	        text-decoration: none;
+        }
+    }
+}

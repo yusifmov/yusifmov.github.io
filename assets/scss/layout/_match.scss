@@ -1,0 +1,75 @@
+section.match{
+	padding: 32px * $factor 64px * $factor;
+	display: flex;
+	background-color: #F6F7F9;
+	gap: 44px * $factor;
+	align-items: center;
+
+	.matchbox{
+		display: flex;
+		gap: 44px * $factor;
+		padding: 24px * $factor 44px * $factor;
+		flex-direction: column;
+		flex-basis: 0;
+		flex-grow: 1;
+		background-color: white;
+		border-radius: 10px * $factor;
+		.title{
+			display: flex;
+			align-items: center;
+			gap: 6px * $factor;
+			@include font(16px, 600, #1A202C, 24px, -0.02em);
+			.icon{
+				width: 12px * $factor;
+				height: 12px * $factor;
+			}
+		}
+
+		.select{
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			label{
+				display: flex;
+				flex-direction: column;
+				gap: 8px * $factor;
+				flex-basis: 0;
+				flex-grow: 1;
+				position: relative;
+				@include font(16px, 700, #1A202C, 24px, -0.02em);
+
+				&:not(:last-child){
+					border-right: 1px solid rgba(195, 212, 233, 0.4);
+				}
+
+				select{
+					border: none;
+					appearance: none;
+					max-width: calc(100% - 20px);
+					@include font(12px, 500, #90A3BF, 15px, -0.02em);
+					&, &:focus{
+						outline: none;
+					}
+				}
+
+				.icon{
+					position: absolute;
+					right: 10px;
+					bottom: 0;
+					width: 14px * $factor;
+					height: 14px * $factor;
+				}
+			}
+		}
+	}
+
+	.swap{
+		width: 60px * $factor;
+		height: 60px * $factor;
+		border-radius: 10px * $factor;
+		background-color: #3563E9;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

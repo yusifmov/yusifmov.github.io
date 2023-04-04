@@ -1,0 +1,16 @@
+$icons: 'filter', 'heart', 'notification', 'search', 'setting', 'swap', 'mark', 'arrow';
+
+@each $icon in $icons{
+	.icon-#{$icon}{
+		background-image: url('../media/icons/#{$icon}.svg');
+	}
+}
+
+.icon{
+	width: 24px * $factor;
+	height: 24px * $factor;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+}

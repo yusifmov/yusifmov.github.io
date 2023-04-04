@@ -1,0 +1,50 @@
+section.offers{
+	padding: 32px * $factor 64px * $factor 0 64px * $factor;
+	display: flex;
+	gap: 32px * $factor;
+	background-color: #F6F7F9;
+	div.card{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px * $factor;
+		$aspectRatio: 640/360;
+		padding: 24px * $factor;
+		flex-basis: 0;
+		flex-grow: 1;
+		aspect-ratio: $aspectRatio;
+		background-position: bottom;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 10px * $factor;
+
+		.title{
+			@include font(32px, 600, white, 48px, -0.03em);
+		}
+		.description{
+			@include font(16px,500, white, 24px, -0.02em);
+		}
+
+		@include link(16px, 600, white, 24px, -0.02em);
+		a.btn{
+			padding: 10px * $factor 20px * $factor;
+			border-radius: 4px;
+		}
+
+		&:first-child{
+			background-color: #54A6FF;
+			background-image: url('./../media/images/bg-left.png');
+			a.btn{
+				background-color: #3563E9;
+			}
+		}
+
+		&:last-child{
+			background-color: #3563E9;
+			background-image: url('./../media/images/bg-right.png');
+			a.btn{
+				background-color: #54A6FF;
+			}
+		}
+	}
+}
